@@ -1,124 +1,200 @@
-
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 
+// Add types for card data
+interface CardData {
+  category: string;
+  title: string;
+  src: string;
+  content: React.ReactNode;
+}
+
+// Add types for CardContent props
+interface CardContentProps {
+  overview: string;
+  technologies: string[];
+  achievements: string[];
+}
+
 export default function AppleCardsCarouselDemo() {
-  const cards = data.map((card, index) => (
+  const cards = data.map((card: CardData, index: number) => (
     <Card key={card.src} card={card} index={index} />
   ));
 
   return (
-    <section id="featured-projects" className="w-full h-full py-16">
-      <div className="container max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 relative inline-block">
-          Featured Data Projects
-          <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-        </h2>
+    <section
+      id="featured-projects"
+      className="w-full h-full py-8 sm:py-12 md:py-16"
+    >
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold relative inline-block px-2">
+            Interests & Achievements
+            <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+          </h2>
+        </div>
       </div>
       <Carousel items={cards} />
     </section>
   );
 }
 
-const DummyContent = () => {
+// Shared CardContent component with TypeScript types
+const CardContent: React.FC<CardContentProps> = ({
+  overview,
+  technologies,
+  achievements,
+}) => {
   return (
-    <>
-      {[...new Array(1).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
-            className="bg-gray-50 dark:bg-slate-800 p-8 md:p-14 rounded-3xl mb-4"
-          >
-            <p className="text-portfolioText dark:text-gray-300 text-base md:text-xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-portfolioPrimary dark:text-portfolioAccent">
-                Project Overview:
-              </span>{" "}
-              This data visualization project transformed complex customer behavior patterns into actionable insights, resulting in a 27% increase in user engagement and 18% higher retention rates within the first quarter after implementation.
-            </p>
-            
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="neumorphic p-6 rounded-xl">
-                <h4 className="text-lg font-semibold mb-3 text-portfolioPrimary dark:text-portfolioAccent">Technologies Used</h4>
-                <div className="flex flex-wrap gap-2">
-                  {['Python', 'Pandas', 'Scikit-Learn', 'Tableau', 'SQL'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-white dark:bg-slate-700 rounded-full text-sm text-gray-700 dark:text-gray-300">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="neumorphic p-6 rounded-xl">
-                <h4 className="text-lg font-semibold mb-3 text-portfolioPrimary dark:text-portfolioAccent">Key Achievements</h4>
-                <ul className="space-y-2 text-portfolioText dark:text-gray-300">
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
-                    <span>Reduced data processing time by 65%</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-2">✓</span>
-                    <span>Increased prediction accuracy to 94%</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="mt-8 flex justify-center">
-              <div className="w-full md:w-4/5 h-64 md:h-80 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 dark:from-slate-700 dark:to-slate-800 flex items-center justify-center">
-                <span className="text-gray-400 dark:text-gray-500">Project Dashboard Visualization</span>
-              </div>
-            </div>
-            
-            <div className="mt-8 flex justify-center gap-4">
-              <a href="#" className="px-6 py-2 bg-portfolioPrimary text-white rounded-full hover:bg-portfolioPrimary/90 transition-colors">
-                View Project
-              </a>
-              <a href="#" className="px-6 py-2 border border-portfolioPrimary text-portfolioPrimary rounded-full hover:bg-portfolioPrimary/10 transition-colors">
-                GitHub Repository
-              </a>
-            </div>
+    <div className="bg-gray-50 dark:bg-slate-800 p-4 sm:p-6 md:p-8 lg:p-14 rounded-2xl sm:rounded-3xl mb-4">
+      <p className="text-portfolioText dark:text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl font-sans max-w-3xl mx-auto">
+        <span className="font-bold text-portfolioPrimary dark:text-portfolioAccent">
+          Overview:
+        </span>{" "}
+        {overview}
+      </p>
+
+      <div className="mt-4 sm:mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div className="neumorphic p-4 sm:p-6 rounded-lg sm:rounded-xl">
+          <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-portfolioPrimary dark:text-portfolioAccent">
+            Topics / Tools
+          </h4>
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
+            {technologies.map((tech) => (
+              <span
+                key={tech}
+                className="px-2 sm:px-3 py-0.5 sm:py-1 bg-white dark:bg-slate-700 rounded-full text-xs sm:text-sm text-gray-700 dark:text-gray-300"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
-        );
-      })}
-    </>
+        </div>
+
+        <div className="neumorphic p-4 sm:p-6 rounded-lg sm:rounded-xl">
+          <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 text-portfolioPrimary dark:text-portfolioAccent">
+            Key Highlights
+          </h4>
+          <ul className="space-y-1.5 sm:space-y-2 text-portfolioText dark:text-gray-300 text-sm sm:text-base">
+            {achievements.map((achievement, idx) => (
+              <li key={idx} className="flex items-start">
+                <span className="text-green-500 mr-2 flex-shrink-0">✓</span>
+                <span className="break-words">{achievement}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
   );
 };
 
-const data = [
+// Type the data array
+const data: CardData[] = [
   {
-    category: "Data Visualization",
-    title: "Customer Behavior Analysis Dashboard",
-    src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3",
-    content: <DummyContent />,
+    category: "Leadership",
+    title: "Best Cadet - NCC Achievement",
+    src: "/Ncc.png",
+    content: (
+      <CardContent
+        overview="Honored with the Best Cadet award in NCC for excellence in leadership, discipline, and teamwork. Participated in various national-level camps and drills."
+        technologies={[
+          "Leadership",
+          "Teamwork",
+          "Discipline",
+          "Public Speaking",
+        ]}
+        achievements={[
+          "Awarded Best Cadet in 2022",
+          "Completed A certificates",
+          "Led a 100-member contingent",
+        ]}
+      />
+    ),
   },
   {
-    category: "Machine Learning",
-    title: "Predictive Analytics for Retail",
-    src: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3",
-    content: <DummyContent />,
+    category: "Research",
+    title: "Exploring Data-Driven Development",
+    src: "/research.png",
+    content: (
+      <CardContent
+        overview="Passionate about exploring the intersection of data and development, focusing on real-world applications and user-driven decision making."
+        technologies={["Python", "R", "SQL", "Data Analysis"]}
+        achievements={[
+          "Conducted research on data patterns",
+          "Developed predictive models",
+          "Created data visualization dashboards",
+        ]}
+      />
+    ),
   },
   {
-    category: "Data Engineering",
-    title: "ETL Pipeline for Real-time Analytics",
-    src: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2876&auto=format&fit=crop&ixlib=rb-4.0.3",
-    content: <DummyContent />,
+    category: "Innovation",
+    title: "Building Smart Solutions with Data",
+    src: "/data.png",
+    content: (
+      <CardContent
+        overview="Creating innovative solutions using data analytics and automation to solve real-world problems efficiently."
+        technologies={["Power BI", "Python", "Automation", "ML"]}
+        achievements={[
+          "Built automated data pipelines",
+          "Developed analytics dashboards",
+          "Implemented ML solutions",
+        ]}
+      />
+    ),
   },
   {
-    category: "Business Intelligence",
-    title: "Sales Performance Monitoring System",
-    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3",
-    content: <DummyContent />,
+    category: "Community",
+    title: "Volunteer Work in Data Literacy",
+    src: "/community.png",
+    content: (
+      <CardContent
+        overview="Contributing to community development through data literacy programs and educational initiatives."
+        technologies={["Teaching", "Mentoring", "Data Skills", "Communication"]}
+        achievements={[
+          "Led community workshops",
+          "Mentored aspiring data analysts",
+          "Created learning resources",
+        ]}
+      />
+    ),
   },
   {
-    category: "Data Science",
-    title: "Customer Segmentation Analysis",
-    src: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3",
-    content: <DummyContent />,
+    category: "Development",
+    title: "Passion for Research and R&D Projects",
+    src: "/learning.png",
+    content: (
+      <CardContent
+        overview="Engaging in continuous research and development projects to stay at the forefront of data science and analytics."
+        technologies={[
+          "Research",
+          "Analysis",
+          "Documentation",
+          "Problem Solving",
+        ]}
+        achievements={[
+          "Completed research projects",
+          "Published technical articles",
+          "Developed case studies",
+        ]}
+      />
+    ),
   },
   {
-    category: "NLP",
-    title: "Sentiment Analysis for Customer Feedback",
-    src: "https://images.unsplash.com/photo-1468971050039-be99497410af?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3",
-    content: <DummyContent />,
+    category: "Curiosity",
+    title: "Lifelong Learner & Data Enthusiast",
+    src: "/public/curosity.png",
+    content: (
+      <CardContent
+        overview="I strongly believe in continuous learning. I read research papers and build personal projects to expand my skills."
+        technologies={["Coursera", "Kaggle", "YouTube", "GitHub"]}
+        achievements={[
+          "Completed courses on data and AI",
+          "Participated in data competitions",
+          "Maintain a personal blog on learning data science",
+        ]}
+      />
+    ),
   },
 ];

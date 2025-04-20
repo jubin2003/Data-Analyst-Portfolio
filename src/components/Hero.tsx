@@ -85,7 +85,7 @@ export const Hero = () => {
           {/* Greeting */}
           <div>
             <h2 className="inline-block text-lg md:text-xl font-medium px-4 py-1.5 rounded-full bg-white/50 dark:bg-white/10 backdrop-blur-sm border border-white/30 dark:border-white/10 mb-6">
-              <span className="text-primary">👋</span> Hello, I'm <span className="font-semibold">Your Name</span>
+              <span className="text-primary">👋</span> Hello, I'm <span className="font-semibold">Jubin Thomas</span>
             </h2>
           </div>
 
@@ -117,7 +117,7 @@ export const Hero = () => {
               Get in Touch
             </a>
             <a 
-              href="/resume.pdf" 
+              href="/public/Jubin_Thomas_DA_Resume__.pdf" 
               className="px-8 py-3.5 glass-button flex items-center gap-2 group"
               target="_blank"
               rel="noopener noreferrer"

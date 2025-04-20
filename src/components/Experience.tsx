@@ -6,41 +6,47 @@ import { cn } from '@/lib/utils';
 // Experience data
 const experiences = [
   {
-    company: 'TechCorp Solutions',
-    logo: '/placeholder.svg',
-    role: 'Senior Data Analyst',
-    period: 'Jan 2022 - Present',
-    location: 'San Francisco, CA',
+    company: "Accenture",
+    logo: "/public/Accenture_logo.svg",
+    role: "Data Analytics and Visualization Intern",
+    period: "May 2023",
+    location: "Remote",
     achievements: [
-      'Led the development of a customer segmentation model that increased marketing campaign effectiveness by 28%',
-      'Built interactive Power BI dashboards for C-level executives to track KPIs across 5 business units',
-      'Optimized SQL queries and data processing pipelines, reducing report generation time by 40%'
-    ]
+      "Built 15+ interactive dashboards in Power BI, improving report accuracy by 40%",
+      "Developed ETL pipelines using Python, reducing data processing errors by 30%",
+      "Automated repetitive tasks, saving 5+ hours weekly and increasing efficiency",
+      "Authored technical documentation that streamlined onboarding by 50%",
+      "Optimized SQL queries, reducing data retrieval time by 30%",
+      "Performed EDA on large datasets to identify business trends that led to a 15% improvement in strategic decisions",
+    ],
+  },
+
+  {
+    company: "Accenture – Strategy Consulting Virtual Internship",
+    logo: "/public/Accenture_logo.svg",
+    role: "Strategy Consulting Intern",
+    period: "Feb 2023 - Mar 2023",
+    location: "Virtual",
+    achievements: [
+      "Redesigned user journeys and assembled strategic plans for mock client projects",
+      "Performed outcomes analysis and set project priorities for consulting simulations",
+      "Conducted prioritization and impact assessments to optimize business strategies",
+      "Completed error identification and language selection exercises for global implementation scenarios",
+    ],
   },
   {
-    company: 'Data Insights Inc.',
-    logo: '/placeholder.svg',
-    role: 'Data Engineer',
-    period: 'Mar 2019 - Dec 2021',
-    location: 'Austin, TX',
+    company: "Quantium – Data Analytics Job Simulation",
+    logo: "/public/quantium-logo.jpg",
+    role: "Data Analytics Job Simulation Trainee",
+    period: "March 2025",
+    location: "Virtual",
     achievements: [
-      'Designed and implemented ETL processes handling 5TB of daily transaction data',
-      'Developed data quality monitoring system that reduced errors by 75%',
-      'Collaborated with cross-functional teams to integrate data from 12 disparate sources'
-    ]
+      "Completed hands-on tasks in data preparation and customer analytics using transactional datasets",
+      "Identified benchmark stores for uplift testing on trial store layouts",
+      "Created detailed reports for the Category Manager to support strategic decision-making",
+      "Developed actionable commercial insights with strong analytical reasoning",
+    ],
   },
-  {
-    company: 'Analytics Partners',
-    logo: '/placeholder.svg',
-    role: 'Business Intelligence Analyst',
-    period: 'Jul 2017 - Feb 2019',
-    location: 'Seattle, WA',
-    achievements: [
-      'Created financial forecasting models that improved budget accuracy by 23%',
-      'Designed Tableau dashboards for sales team that contributed to 15% revenue growth',
-      'Automated weekly reporting processes, saving 20 hours of manual work monthly'
-    ]
-  }
 ];
 
 export const Experience = () => {

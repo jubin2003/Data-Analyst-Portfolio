@@ -1,9 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -80,7 +79,12 @@
     @apply bg-background text-foreground font-inter;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-jakarta font-semibold;
   }
 
@@ -91,7 +95,7 @@
   .glass-card {
     @apply bg-white/70 dark:bg-slate-950/70 backdrop-blur-md border border-white/20 dark:border-slate-800/80 rounded-2xl shadow-lg;
   }
-  
+
   .glass-button {
     @apply bg-white/20 dark:bg-white/10 backdrop-blur-sm border border-white/20 dark:border-white/5 rounded-full shadow-sm hover:shadow-md transition-all duration-300;
   }
