@@ -11,7 +11,7 @@ const projects = [
     description:
       "Designed an interactive Power BI dashboard to analyze sales trends for AtliQ hardware. The solution provides clear visibility into sales data and supports strategic decisions to boost revenue, with a projected 7% increase in the next quarter.",
     tools: ["Power BI", "SQL"],
-    image: "/public/dashboard.png",
+    image: "/dashboard.png",
     github: "https://github.com/jubin2003", // replace with actual if available
     demo: null,
     tags: ["Analytics", "Dashboards"],
@@ -22,7 +22,7 @@ const projects = [
     description:
       "Built a Power BI dashboard to track supply chain KPIs (OT%, IF%, OTIF%) for AtliQ Mart, helping identify delivery inefficiencies. The insights enabled proactive issue resolution and a potential 20% cost saving before expansion.",
     tools: ["Power BI", "Excel"],
-    image: "/public/supplychain.png",
+    image: "/supplychain.png",
     github: "https://github.com/jubin2003", // replace with actual if available
     demo: null,
     tags: ["Analytics", "Supply Chain"],
@@ -33,7 +33,7 @@ const projects = [
     description:
       "Created a Power BI dashboard for HR to monitor attendance, work hours, leaves, and performance. The solution streamlined daily HR tasks and saved 3–4 hours of manual effort each day.",
     tools: ["Power BI", "Excel"],
-    image: "/public/HR.png",
+    image: "/HR.png",
     github: "https://github.com/jubin2003", // replace with actual if available
     demo: null,
     tags: ["Analytics", "Dashboards"],
@@ -44,7 +44,7 @@ const projects = [
     description:
       "Developed a dashboard using Power BI, Excel, and SQL to visualize hotel booking patterns, cancellations, and seasonal trends. Enabled business stakeholders to optimize pricing and occupancy strategies.",
     tools: ["Power BI", "Excel", "SQL"],
-    image: "/public/hotel booking.png",
+    image: "/hotel booking.png",
     github: "https://github.com/jubin2003",
     demo: null,
     tags: ["Analytics", "Dashboards"],
@@ -55,7 +55,7 @@ const projects = [
     description:
       "Built a complete event management solution to handle planning, registration, and performance metrics. The system simplified coordination and improved participant tracking and feedback collection.",
     tools: ["Excel", "Power BI"],
-    image: "/public/event-management.png",
+    image: "/event-management.png",
     github: "https://github.com/jubin2003",
     demo: null,
     tags: ["Automation", "Dashboards"],
@@ -66,7 +66,7 @@ const projects = [
     description:
       "Created a sales analytics dashboard to track Blinkit performance metrics including category sales, delivery times, and regional trends. Supported data-driven decision-making for logistics and inventory.",
     tools: ["Power BI", "Excel"],
-    image: "/public/blinkit.png",
+    image: "/blinkit.png",
     github: "https://github.com/jubin2003",
     demo: null,
     tags: ["Analytics", "E-commerce"],
@@ -77,7 +77,7 @@ const projects = [
     description:
       "Built a Python-based scraper to monitor Amazon product prices and availability. Included real-time alerts for price drops using email notifications, enabling users to grab the best deals quickly.",
     tools: ["Python", "BeautifulSoup", "SMTP"],
-    image: "/public/amazon-scrapping.jpeg",
+    image: "/amazon-scrapping.jpeg",
     github: "https://github.com/jubin2003/Amazon-Web-Scrapping-Project-Python",
     demo: null,
     tags: ["Automation", "Web Scraping"],
@@ -88,7 +88,7 @@ const projects = [
     description:
       "Developed a tool to analyze cardamom prices from various sources and send automated alerts for significant fluctuations. Helped stakeholders make timely buying/selling decisions.",
     tools: ["Python", "BeautifulSoup", "Email API"],
-    image: "/public/project_image_cardamom.jpeg",
+    image: "/project_image_cardamom.jpeg",
     github: "https://github.com/jubin2003/Cardamom-Price-Python-Project",
     demo: null,
     tags: ["Analytics", "Automation"],

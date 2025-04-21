@@ -184,7 +184,7 @@ const data: CardData[] = [
   {
     category: "Curiosity",
     title: "Lifelong Learner & Data Enthusiast",
-    src: "/public/curosity.png",
+    src: "/curosity.png",
     content: (
       <CardContent
         overview="I strongly believe in continuous learning. I read research papers and build personal projects to expand my skills."

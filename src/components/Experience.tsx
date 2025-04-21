@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 const experiences = [
   {
     company: "Accenture",
-    logo: "/public/Accenture_logo.svg",
+    logo: "/Accenture_logo.svg",
     role: "Data Analytics and Visualization Intern",
     period: "May 2023",
     location: "Remote",
@@ -23,7 +23,7 @@ const experiences = [
 
   {
     company: "Accenture – Strategy Consulting Virtual Internship",
-    logo: "/public/Accenture_logo.svg",
+    logo: "/Accenture_logo.svg",
     role: "Strategy Consulting Intern",
     period: "Feb 2023 - Mar 2023",
     location: "Virtual",
@@ -36,7 +36,7 @@ const experiences = [
   },
   {
     company: "Quantium – Data Analytics Job Simulation",
-    logo: "/public/quantium-logo.jpg",
+    logo: "/quantium-logo.jpg",
     role: "Data Analytics Job Simulation Trainee",
     period: "March 2025",
     location: "Virtual",
