@@ -57,31 +57,31 @@ const certifications = [
     name: "Microsoft Office Specialist Excel 2019 Associate",
     issuer: "Microsoft",
     date: "April 2023",
-    icon: "/public/Microsoft_logo.svg",
+    icon: "/Microsoft_logo.svg",
   },
   {
     name: "Google Digital Marketing ",
     issuer: "Google",
     date: "March 2022",
-    icon: "/public/google-icon-logo-svgrepo-com.svg",
+    icon: "/google-icon-logo-svgrepo-com.svg",
   },
   {
     name: " Solutions Architecture Virtual Experience Program",
     issuer: "Amazon Web Services",
     date: "August 2023",
-    icon: "/public/Amazon_Web_Services_Logo.svg",
+    icon: "/Amazon_Web_Services_Logo.svg",
   },
   {
     name: " Technology Virtual Experience Program",
     issuer: "Deloitte",
     date: "July 2023",
-    icon: "/public/Deloitte.svg",
+    icon: "/Deloitte.svg",
   },
   {
     name: " Strategy Consulting Virtual Internship",
     issuer: "Accenture",
     date: "March 2023",
-    icon: "/public/Accenture_logo.svg",
+    icon: "/Accenture_logo.svg",
   },
 ];
 
